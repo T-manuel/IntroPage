@@ -1,0 +1,449 @@
+:root {
+  --AlmostWhite: #fafafa;
+  --MediumGray: dimgray;
+  --AlmostBlack: #141414;
+  --smallText: 500;
+  --largeText: 700;
+  --font: Epilogue, Montserrat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  height: 100vh;
+  background: var(--AlmostWhite);
+}
+
+.NavBar {
+  width: 100%;
+}
+
+.NavBar .navLeft {
+  padding: 20px 20px;
+  display: grid;
+  grid-auto-flow: column;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.NavBar .navLeft .menuDiv {
+  cursor: pointer;
+}
+
+.NavBar .navLeft .NavBarMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: #fff;
+  min-width: 55vw;
+  z-index: 999;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems {
+  font-size: 18px;
+  display: grid;
+  gap: 30px;
+  color: var(--MediumGray);
+  padding: 20px;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .closemenuDiv {
+  justify-self: flex-end;
+  cursor: pointer;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop {
+  margin-bottom: 20px;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .site {
+  cursor: pointer;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .site .navhead {
+  display: inline;
+  margin-right: 7px;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .site .arrow {
+  transition: transform .8s ease-in-out;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists {
+  padding: 10px 20px;
+  width: 100%;
+  display: grid;
+  gap: 15px;
+  transition: .6s ease-in-out;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists .SF {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists .SF .text {
+  font-weight: var(--smallText);
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists .texts {
+  cursor: pointer;
+  font-weight: var(--smallText);
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .careers {
+  margin-bottom: 20px;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .dropDown .About {
+  margin-bottom: 20px;
+  font-weight: var(--largeText);
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .navRight {
+  display: grid;
+  justify-items: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .navRight .login {
+  font-weight: var(--smallText);
+}
+
+.NavBar .navLeft .NavBarMenu .menuItems .navRight .Register {
+  border: 1px solid var(--MediumGray);
+  border-radius: 10px;
+  padding: 8px 55px;
+  font-weight: var(--smallText);
+}
+
+.main {
+  display: grid;
+  margin-top: 15px;
+  gap: 40px;
+}
+
+.main .picsDiv .hero {
+  width: 100%;
+}
+
+.main .picsDiv :nth-child(2) {
+  display: none;
+}
+
+.main .desc {
+  padding: 0 20px;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+.main .desc .heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: var(--largeText);
+  color: var(--AlmostBlack);
+}
+
+.main .desc .description {
+  font-size: 15px;
+  text-align: center;
+  color: var(--MediumGray);
+  font-weight: var(--smallText);
+  line-height: 25px;
+}
+
+.main .desc .btn {
+  cursor: pointer;
+}
+
+.main .desc .btn .button {
+  color: var(--AlmostWhite);
+  font-weight: var(--largeText);
+  font-size: 11px;
+  background: var(--AlmostBlack);
+  padding: 12px 23px;
+  border-radius: 10px;
+}
+
+.main .desc .btn .button:hover {
+  color: var(--AlmostBlack);
+  background: none;
+  border: 1px solid black;
+}
+
+.main .desc .ads {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.main .desc .ads .advert {
+  width: 100%;
+}
+
+@media all and (min-width: 620px) {
+  .NavBar {
+    width: 90%;
+    margin: auto;
+  }
+  .NavBar .navLeft {
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    position: inherit;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .NavBar .navLeft .menuDiv {
+    display: none;
+  }
+  .NavBar .navLeft .NavBarMenu {
+    position: static;
+    display: block;
+    height: 32px;
+    background: none;
+    z-index: auto;
+    animation-fill-mode: initial;
+    width: 100%;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems {
+    font-size: 18px;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .closemenuDiv {
+    display: none;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown {
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop {
+    margin-bottom: 0;
+    position: relative;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .site {
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .site .navhead {
+    display: block;
+    margin-right: 0;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .site .arrow {
+    height: 6px;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ddd;
+    width: max-content;
+    position: absolute;
+    padding: 10px 25px;
+    z-index: 999;
+    top: 30px;
+    left: -20px;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists .SF {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists .SF .text {
+    font-weight: var(--smallText);
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists .texts {
+    cursor: pointer;
+    font-weight: var(--smallText);
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .careers, .NavBar .navLeft .NavBarMenu .menuItems .dropDown .About {
+    margin-bottom: 0;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .navRight {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    gap: 30px;
+    padding: 0;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .navRight .Register {
+    padding: 5px 15px;
+  }
+  .main {
+    gap: 30px;
+    grid-auto-flow: column;
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    height: 88%;
+    max-width: 900px;
+  }
+  .main .picsDiv {
+    grid-column-start: 2;
+  }
+  .main .picsDiv :nth-child(1) {
+    display: none;
+  }
+  .main .picsDiv :nth-child(2) {
+    display: block;
+  }
+  .main .desc {
+    padding: 0;
+    display: grid;
+    gap: 15px;
+    justify-items: flex-start;
+    align-items: center;
+  }
+  .main .desc .heading {
+    text-align: left;
+    font-size: 35px;
+  }
+  .main .desc .heading span {
+    display: block;
+  }
+  .main .desc .description {
+    width: 90%;
+    font-size: 13px;
+    text-align: left;
+    line-height: 30px;
+  }
+  .main .desc .btn .button {
+    font-size: 11px;
+    padding: 12px 23px;
+  }
+  .main .desc .ads {
+    gap: 30px;
+    margin-top: 15px;
+  }
+}
+
+@media all and (min-width: 710px) {
+  .main {
+    gap: 10%;
+  }
+  .main .desc {
+    gap: 32px;
+  }
+  .main .desc .heading {
+    font-size: 42px;
+  }
+  .main .desc .description {
+    width: 85%;
+    font-size: 15px;
+  }
+  .main .desc .btn .button {
+    font-size: 12px;
+    padding: 15px 25px;
+  }
+  .main .desc .ads {
+    gap: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media all and (min-width: 950px) {
+  .NavBar .navLeft {
+    padding: 20px 0;
+    display: flex;
+    gap: 50px;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems {
+    font-size: 18px;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown {
+    gap: 25px;
+  }
+  .NavBar .navLeft .NavBarMenu .menuItems .dropDown .drop .lists {
+    font-size: 17px;
+    top: 30px;
+    left: -30px;
+  }
+  .main {
+    gap: 15%;
+  }
+  .main .picsDiv {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .main .desc {
+    gap: 25px;
+  }
+  .main .desc .heading {
+    font-size: 50px;
+  }
+  .main .desc .description {
+    width: 85%;
+    font-size: 17px;
+  }
+  .main .desc .ads {
+    gap: 30px;
+    margin-top: 40px;
+  }
+}
+
+.none {
+  display: none;
+}
+
+.noneHack {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.textHover:hover {
+  color: var(--AlmostBlack);
+  font-weight: var(--largeText);
+}
+
+.rotate {
+  transform: rotateX(180deg);
+}
+
+@keyframes sidebar {
+  from {
+    right: -250px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.fromRight {
+  animation: sidebar .7s ease-in both;
+}
